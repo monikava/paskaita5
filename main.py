@@ -21,7 +21,16 @@ def multiply(a,b):
 print(multiply(a=5,b=3))
 
 # 4. Sukurkite Funkciją kuri priima masyvą, prasuka ciklą ir atspausdina kiekvieną narį vienoje eilutėje.
+print("\n4. Sukurkite Funkciją kuri priima masyvą, prasuka ciklą ir atspausdina kiekvieną narį vienoje eilutėje.")
 
+def print_list(array):
+    row = ""
+    for a in array:
+        row += f"[{a}]"
+    print(row)
+
+array = [1,3,5,7,9,11]
+print_list(array)
 
 # 5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random int skaičių ir jį gražintų.
 
