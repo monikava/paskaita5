@@ -1,10 +1,11 @@
+import random
 
 print("-----------LENGVESNI-----------\n")
 # 1. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.
 print("1. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.")
 def two_numbers(a,b):
     print(a + b)
-two_numbers(a=4,b=13)
+two_numbers(4,14)
 
 # 2. Sukurkite Funkciją kuri vadinasi PISq. Funkcija gražina float tipo reikšmę. Reikšmė yra : 9.8596; Gautą reikšmę atspausdinkite.
 print("\n2. Sukurkite Funkciją kuri vadinasi PISq. Funkcija gražina float tipo reikšmę. Reikšmė yra : 9.8596; Gautą reikšmę atspausdinkite.")
@@ -16,9 +17,10 @@ print(PISq())
 # 3. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Funkcija gražina skaičių sandaugą.; Gautą reikšmę atspausdinkite.
 print("\n3. Sukurkite Funkciją kuri priima du int tipo kintamuosius. Funkcija gražina skaičių sandaugą.; Gautą reikšmę atspausdinkite.")
 def multiply(a,b):
-    return a * b
+    c = a * b
+    return c
 
-print(multiply(a=5,b=3))
+print(multiply(5,5))
 
 # 4. Sukurkite Funkciją kuri priima masyvą, prasuka ciklą ir atspausdina kiekvieną narį vienoje eilutėje.
 print("\n4. Sukurkite Funkciją kuri priima masyvą, prasuka ciklą ir atspausdina kiekvieną narį vienoje eilutėje.")
@@ -26,19 +28,29 @@ print("\n4. Sukurkite Funkciją kuri priima masyvą, prasuka ciklą ir atspausdi
 def print_list(array):
     row = ""
     for a in array:
-        row += f"[{a}]"
+        row += (f"{a} ")
     print(row)
 
 array = [1,3,5,7,9,11]
 print_list(array)
 
 # 5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random int skaičių ir jį gražintų.
+print("\n5. Sukurkite Funkciją kuri priima du int tipo kintamuosius, min ir max reikšmėms nustatyti ir sugeneruoja random int skaičių ir jį gražintų.")
+def min_max(min,max):
+    return(random.randint(min,max))
 
+print(min_max(0, 999))
 
 # 6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo kintamuosius, min, max ir length reikšmėms nustatyti.
+print(f"\n6. Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų. Funkcija priima tris int tipo kintamuosius, min, max ir length reikšmėms nustatyti.")
+def random_array(min,max,length):
+    random.randint(min,max,length)
+    return(array)
 
 
-# 7. Sukurkite Funkciją kuri panaudotų 6toje užduotyje sugeneruotą masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
+
+
+# 7. Sukurkite Funkciją kuri panaudotų 6-toje užduotyje sugeneruotą masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
 
 
 # 8. Sukurkite Funkciją kuri priimtų 6toje užduotyje sugeneruotą masyvą ir gražintų jos skaičių vidurkį (double).
