@@ -87,10 +87,12 @@ print(array_average(random_array(1, 10, 6)))
 # 9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis. Pirmas int - išoriniam ciklui, antras vidiniam.
 print("\n9. Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis. Pirmas int - išoriniam ciklui, antras vidiniam.")
 def rectangle(length,width):
-    for l in range(1,length):
-        for w in range(1,width):
+    for l in range(length):
+        for w in range(width):
+            print("*", end=" ")
+        print()
 
-
+rectangle(4,6)
 
 # 10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų. Sakinys - Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį) (simboliu yra 23, tarpu yra 3)
 
