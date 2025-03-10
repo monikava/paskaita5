@@ -92,15 +92,41 @@ def rectangle(length,width):
             print("*", end=" ")
         print()
 
-rectangle(4,6)
+rectangle(4,5)
 
-# 10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių(simbolių) ir tarpų. Sakinys - Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį) (simboliu yra 23, tarpu yra 3)
+# 10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių (simbolių) ir tarpų. Sakinys - Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį) (simboliu yra 23, tarpu yra 3)
+print("\n10. Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių (simbolių) ir tarpų. Sakinys - Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį) (simboliu yra 23, tarpu yra 3)")
+def sentence(sakinys):
+    symbols = 0
+    spaces = 0
+    for s in sakinys:
+        if s == " ":
+            spaces += 1
+        else:
+            symbols += 1
+    print(f"Number of symbols: {symbols}\nNumber of spaces: {spaces}")
 
+sentence("Šiandien labai graži diena")
 
 # 11. Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
+print("\n11. Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.")
+def reverse(fraze):
+    return "".join(reversed(fraze))
 
+def reverse2(fraze):
+    return fraze [::-1]
 
-# print("\n-----------SUNKESNI-----------\n")
+def reverse3(fraze):
+    fraze_reversed = ""
+    for f in fraze:
+        fraze_reversed = f + fraze_reversed
+    return fraze_reversed
+
+print(reverse("Sukurkite Funkciją"))
+print(reverse2("Sukurkite Funkciją"))
+print(reverse3("Sukurkite Funkciją"))
+
+print("\n-----------SUNKESNI-----------\n")
 
 # 1. Parašykite funkciją, kurios argumentas būtų tekstas, kuris būtų atspausdinamas konsolėje pridedant “---” pradžioje ir gale. PVZ (---labas---)
 # 2. Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu. Jei tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75]. (apačioje yra funkcija, ją nusikopijuokite ir paleiskite, ji sugeneruos stringą, su kuriuo dirbsite)
