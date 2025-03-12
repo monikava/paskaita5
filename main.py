@@ -184,37 +184,16 @@ def generateRndStr(length):
 
 random_symbols = generateRndStr(10)
 print(random_symbols + "\n")
-# numbers = []
-# for r in random_symbols:
-#     if r.isdigit():
-#         append.numbers(r)
-#         print(f"[{numbers}]")
-#     else:
-#         print(f"{r}")
+numbers = []
+for r in random_symbols:
+    if r.isdigit():
+        numbers.append(r)
+        print(f"[{numbers}]")
+    else:
+        print(f"{r}")
 
 my_list = [1, 2, 'a', 3, 'b', 4, 'c']
 
-# To hold the result
-result = []
-current_numbers = []
-
-# Loop through the list
-for symbol in random_symbols:
-    if isinstance(symbol, int):  # Check if item is a number
-        if current_numbers:
-            result.append(current_numbers)
-            current_numbers = []  # Reset for the next group of numbers
-        result.append(symbol)  # Add the letter to a new row
-    else:
-        # If there are any numbers collected, add them as a row
-        current_numbers.append(symbol)
-# If there are any numbers left in the current_numbers list, add them
-if current_numbers:
-    result.append(current_numbers)
-
-# Display the result
-for row in result:
-    print(row)
 
 # 3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save). Pvz padavus 10 turi grąžinti 2,  o padavus 20 gražintų 3.
 # 4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
