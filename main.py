@@ -74,14 +74,14 @@ print(sum_array(random_array(1, 6, 10)))
 print("\n8. Sukurkite Funkciją kuri priimtų 6toje užduotyje sugeneruotą masyvą ir gražintų jos skaičių vidurkį (double).")
 
 def array_average(random_array):
-    arrayaverage = 0
+    array_average = 0
     sumarray = 0
     length = 0
     for n in random_array:
         sumarray = sumarray + n
         length += 1
-        arrayaverage = float(sumarray / length)
-    return (arrayaverage)
+        array_average = float(sumarray / length)
+    return (array_average)
 
 print(array_average(random_array(1, 10, 6)))
 
@@ -152,16 +152,23 @@ def generateRndStr(length):
 
 random_symbols = generateRndStr(10)
 print(random_symbols + "\n")
-numbers = []
-for r in random_symbols:
-    if r.isdigit():
-        numbers.append(r)
-        print(f"[{numbers}]")
-    else:
-        print(f"{r}")
 
-my_list = [1, 2, 'a', 3, 'b', 4, 'c']
+def new_array(random_symbols):
+    numbers = ""
+    for r in random_symbols:
+        if r.isdigit():
+            numbers += r
+        else:
+            if numbers == "":
+                numbers = ""
+            else:
+                print(f"[{numbers}]")
+            numbers = ""
+            print(r)
+    if numbers:
+       print(f"[{numbers}]")
 
+new_array(random_symbols)
 
 # 3. Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save). Pvz padavus 10 turi grąžinti 2,  o padavus 20 gražintų 3.
 # 4. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Išrūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
